@@ -1,0 +1,626 @@
+.wallet-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: absolute;
+    /* margin-top: 100px; */
+}
+
+.wallet-page-items {
+    width: 100%;
+    /* background: #3A3B3C; */
+    display: flex;
+    height: 100vh;
+    position: absolute;
+}
+
+.FontIcon {
+    margin-right: 0.5rem;
+}
+
+aside {
+    margin-top: 100px;
+    width: 300px;
+    background: #242526;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 9000;
+}
+
+.side-item {
+    margin: 10px;
+    width: 100%;
+}
+
+.side-item a {
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.side-text {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.side-text:hover {
+    background: #3A3B3C;
+    border-radius: 10px;
+}
+
+.wallet-content-page span {
+    color: #fff
+}
+
+.wallet-content-page {
+    margin-left: 300px;
+    margin-top: 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: #2a2b2c;
+}
+
+.wallet-content {
+    width: 80%;
+    margin-top: 50px;
+}
+
+.overview-area {
+    width: 100%;
+    /* height: 400px; */
+    background: #3A3B3C;
+    border-radius: 10px;
+}
+
+.overview-area-items {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.overview-area-item-1 {
+    width: 32%;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.item-balance {
+    width: 100%;
+    height: 130px;
+    background: #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-balance span {
+    opacity: 70%;
+}
+
+.items-wallet-action {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.items-wallet-action-left {
+    width: 48%;
+    height: 200px;
+    /* background: #333; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-wallet-income {
+    width: 100%;
+    height: 90px;
+    background: #5D7B6F;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    touch-action: manipulation;
+}
+
+.item-wallet-income:hover {
+    background: #6e9183;
+}
+
+.item-wallet-outcome {
+    width: 100%;
+    height: 90px;
+    background: #EF5C76;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    touch-action: manipulation;
+}
+
+.item-wallet-outcome:hover {
+    background: #c04e61;
+}
+
+.item-sticker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 200px;
+    /* background: #9543A7; */
+    border-radius: 10px;
+}
+
+.overview-area-item-2 {
+    width: 32%;
+    height: 350px;
+    background: #333;
+    border-radius: 10px;
+}
+
+.overview-area-item-3 {
+    width: 32%;
+    height: 350px;
+    background: #333;
+    border-radius: 10px;
+}
+
+
+.detail-title {
+    padding: 20px;
+}
+
+.detail-lists {
+    width: 100%;
+    height: 120px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.des-detail-list {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.amount-detail-list {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.amount-detail-lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.mydebt-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mydebt-area {
+    width: 60%;
+    /* height: 400px; */
+    background: #3A3B3C;
+    border-radius: 10px;
+}
+
+.debt-area-items {
+    height: 350px;
+    padding: 20px;
+}
+
+.debt-balance p{
+    width: 100%;
+    /* height: 200px;
+    background: #333; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Prompt', sans-serif;
+}
+
+.borrow-balance {
+    width: 100%;
+    height: 90px;
+    background: #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.borrow-balance p {
+    opacity: 70%;
+}
+
+.lend-balance {
+    width: 100%;
+    height: 90px;
+    background: #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.lend-balance p{
+    opacity: 70%;
+}
+
+.debt-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.borrow-button {
+    width: 49%;
+    height: 90px;
+    background: #5D7B6F;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    touch-action: manipulation;
+}
+
+.borrow-button:hover {
+    background: #6e9183;
+}
+
+.lend-button {
+    width: 49%;
+    height: 90px;
+    background: #EF5C76;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    touch-action: manipulation;
+}
+
+.lend-button:hover {
+    background: #c04e61;
+}
+
+.check-button {
+    margin-right: 10px;
+}
+
+.mygoal-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mygoal-area {
+    width: 600px;
+    /* height: 400px; */
+    background: #3A3B3C;
+    border-radius: 10px;
+}
+
+.goal-area-items {
+    height: 750px;
+    padding: 20px;
+}
+
+.goal-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goal-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.goal-info span {
+    color:#F6AD37
+}
+
+.goal-input {
+    margin-bottom: 10px;
+}
+
+.goal-img {
+    width: 80%;
+    height: 200px;
+    border-radius: 10px;
+    background: #16181A;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.goal-img img {
+    width: auto;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.goal-progress {
+    width: 80%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.goal-save {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    background: #0072F5;
+}
+
+.goal-save:hover {
+    background: #4e95e6;
+}
+
+.goal-income {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    background: #17C964;
+}
+
+.goal-income:hover {
+    background: #14a352;
+}
+
+.goal-income {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    background: #17C964;
+}
+
+.goal-income:hover {
+    background: #14a352;
+}
+
+.goal-outcome {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    background: #F4256D;
+}
+
+.goal-outcome:hover {
+    background: #F75F94;
+}
+
+.goal-reset {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    background: #048EA9;
+}
+
+.goal-reset:hover {
+    background: #036072;
+}
+
+.ow-mygoal-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.ow-mygoal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ow-mygoal-img {
+    width: 80%;
+    height: 180px;
+    border-radius: 10px;
+    background: #16181A;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.ow-mygoal-img img {
+    width: auto;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover
+}
+
+.ow-mygoal-progress {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ow-today-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ow-today-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ow-today-card-items {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+.ow-today-badge {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #5D7B6F;
+    border-radius: 10px;
+}
+
+.ow-today-item {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #444A66;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1300px) { 
+    .overview-area-items {
+        flex-direction: column;
+    }
+
+    .overview-area-item-1, .overview-area-item-2, .overview-area-item-3 {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .mygoal-area {
+        width: 90%;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    aside {
+        width: 60px;
+        margin-top: 100px;
+    }
+
+    .side-text span {
+        display: none;
+    }
+
+    .FontIcon {
+        margin-right: 0rem;
+    }
+
+    .wallet-content-page {
+        margin-left: 60px;
+        margin-top: 100px;
+    }
+
+    .wallet-content {
+        width: 95%;
+    }
+
+    .detail-lists {
+        padding: 20px;
+    }
+
+    .mydebt-area {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 800px) { 
+
+    .detail-lists {
+        flex-direction: column;
+    }
+    .des-detail-list {
+        width: 90%;
+        justify-content: space-between;
+    }
+    .amount-detail-list {
+        width: 100%;
+        justify-content: center;
+    }
+    .amount-detail-lists {
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .check-button span {
+        display: none;
+    }
+    .mygoal-area {
+        width: 100%;
+    }
+
+    .goal-img {
+        width: 100%;
+    }
+
+    .goal-area-items {
+        height: 850px;
+    }
+    
+}
+
