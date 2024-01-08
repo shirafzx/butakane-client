@@ -37,7 +37,7 @@ const AboutUs = () => {
           icon
           color="primary"
           target="_blank"
-          href="https://github.com/nextui-org/nextui"
+          href="https://github.com/sirasit-kmutnb/butakane-client"
         >
           Visit source code on GitHub.
         </Link>
