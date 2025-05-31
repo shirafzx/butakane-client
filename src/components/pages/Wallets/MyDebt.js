@@ -33,58 +33,41 @@ const MyDebt = () => {
     fetchData()// eslint-disable-next-line
   },[])
 
-  const payBack=(_id,amount)=>{
-    axios
-    .put(
-      `${process.env.REACT_APP_API}/payback`,
-      {
-        _id,
-        amount
-      },{
-        headers:{
-          'Authorization':token
-          }
-      }
-    ).then(response=>{
-    })
-    .catch(err=>console.log(err))
-    axios
-        .put(
-            `${process.env.REACT_APP_API}/outcome`,
-            { amount, detail:`(คืนเงิน)` },
-            {
-                headers:{
-                'Authorization':token
-                }
-            }
-        )
-        .then(response => {
-            
-        })
-        .catch(err => {
-            console.log("error");
-        })
+  const payBack = async (_id, amount) => {
+    try {
+      await axios.put(`${process.env.REACT_APP_API}/payback`, { _id, amount }, {
+        headers: { 'Authorization': token }
+      });
 
-    navigate("/Debt")
-    fetchData()
-  }
+      await axios.put(`${process.env.REACT_APP_API}/outcome`, {
+        amount,
+        detail: '(คืนเงิน)'
+      }, {
+        headers: { 'Authorization': token }
+      });
 
-  const receiveBack=(_id,amount)=>{
-    axios
-    .put(
-      `${process.env.REACT_APP_API}/receiveback`,
-      {
-        _id,
-        amount
-      },{
-        headers:{
-          'Authorization':token
-          }
-      }
-    ).then(response=>{
-    })
-    .catch(err=>console.log(err))
-    axios
+      navigate("/Debt");
+    } catch (err) {
+      console.error("Error during payBack:", err);
+    }
+  };
+
+  const receiveBack= async (_id,amount)=>{
+    try {
+      await axios
+                .put(
+                  `${process.env.REACT_APP_API}/receiveback`,
+                  {
+                    _id,
+                    amount
+                  },{
+                    headers:{
+                      'Authorization':token
+                      }
+                  });
+    
+    
+    await axios
         .put(
             `${process.env.REACT_APP_API}/income`,
             { amount, detail:`(ได้รับเงินคืน)` },
@@ -102,7 +85,9 @@ const MyDebt = () => {
         })
 
     navigate("/Debt")
-    fetchData()
+      } catch (err) {
+        console.error("Error during payBack:", err);
+    }
   }
 
 
