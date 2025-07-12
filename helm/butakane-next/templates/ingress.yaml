@@ -6,12 +6,13 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: cloudflare-dns
     nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
 spec:
+  ingressClassName: nginx
   tls:
     - hosts:
         - butakane.lysquinox.dev
       secretName: butakane-tls
-  ingressClassName: nginx
   rules:
     - host: butakane.lysquinox.dev
       http:
@@ -23,3 +24,4 @@ spec:
                 name: butakane-web
                 port:
                   number: 3000
+
