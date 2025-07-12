@@ -1,14 +1,19 @@
-# Build
-FROM node:20-alpine AS builder
+# Use a separate step for deps to allow caching
+FROM node:22-alpine AS deps
 WORKDIR /app
+COPY package.json pnpm-lock.yaml ./
+RUN corepack enable && corepack prepare pnpm@latest --activate && pnpm install --frozen-lockfile
 
+# Main build step
+FROM node:22-alpine AS builder
+WORKDIR /app
 COPY . .
-RUN corepack enable && corepack prepare pnpm@latest --activate
-RUN pnpm install
+COPY --from=deps /app/node_modules ./node_modules
 RUN pnpm build
 
+
 # Serve
-FROM node:20-alpine
+FROM node:22-alpine
 WORKDIR /app
 
 RUN corepack enable && corepack prepare pnpm@latest --activate
