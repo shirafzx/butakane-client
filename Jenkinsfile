@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/shirafzx/butakane-client.git'
+                git branch: 'feature/butakane-migrate-client', url: 'https://github.com/shirafzx/butakane-client.git'
             }
         }
 
