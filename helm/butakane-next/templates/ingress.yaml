@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: butakane-ingress
+  namespace: butakane-dev
+  annotations:
+    cert-manager.io/cluster-issuer: cloudflare-dns
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+    - hosts:
+        - butakane.lysquinox.dev
+      secretName: butakane-tls
+  rules:
+    - host: butakane.lysquinox.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: butakane-web
+                port:
+                  number: 3000

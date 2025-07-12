@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: butakane-web
+  namespace: butakane-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: butakane-web
+  template:
+    metadata:
+      labels:
+        app: butakane-web
+    spec:
+      containers:
+      - name: butakane-web
+        image: lysist/butakane-client:latest  # Jenkins overrides this with a tag
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NEXT_PUBLIC_API
+          value: http://butakane-api.butakane-dev.svc:8081
+        - name: NEXTAUTH_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: butakane-client-secret
+              key: NEXTAUTH_SECRET
