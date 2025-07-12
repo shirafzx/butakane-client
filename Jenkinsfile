@@ -47,9 +47,9 @@ pipeline {
                         kubectl get namespace butakane-dev || kubectl create namespace butakane-dev
 
                         # Apply deployment resources
-                        kubectl apply -f helm/service.yaml --namespace=butakane-dev
-                        kubectl apply -f helm/ingress.yaml --namespace=butakane-dev
-                        kubectl apply -f helm/deployment.yaml --namespace=butakane-dev
+                        kubectl apply -f helm/butakane-next/templates/service.yaml --namespace=butakane-dev
+                        kubectl apply -f helm/butakane-next/templates/ingress.yaml --namespace=butakane-dev
+                        kubectl apply -f helm/butakane-next/templates/deployment.yaml --namespace=butakane-dev
 
                         # Set new image tag
                         kubectl set image deployment/butakane-web \
