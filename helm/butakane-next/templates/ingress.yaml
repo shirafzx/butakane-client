@@ -11,6 +11,7 @@ spec:
     - hosts:
         - butakane.lysquinox.dev
       secretName: butakane-tls
+  ingressClassName: nginx
   rules:
     - host: butakane.lysquinox.dev
       http:
