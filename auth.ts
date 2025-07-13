@@ -52,6 +52,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
               name: data.userName,
               accessToken: data.token,
             };
+          } else {
+            console.error("Login failed:", await res.text());
           }
 
           return null;
@@ -93,4 +95,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   // Optional: Add secret for production
   secret: process.env.NEXTAUTH_SECRET,
+  trustHost: true,
 });
