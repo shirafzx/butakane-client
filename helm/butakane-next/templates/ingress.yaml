@@ -5,7 +5,6 @@ metadata:
   namespace: butakane-dev
   annotations:
     cert-manager.io/cluster-issuer: cloudflare-dns
-    nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
 spec:
   ingressClassName: nginx

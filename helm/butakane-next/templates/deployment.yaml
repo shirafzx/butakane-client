@@ -21,6 +21,10 @@ spec:
         env:
         - name: NEXT_PUBLIC_API
           value: http://butakane-api.butakane-dev.svc:8081
+        - name: NEXTAUTH_URL
+          value: https://butakane.lysquinox.dev
+        - name: NEXTAUTH_URL_INTERNAL
+          value: http://butakane-web:3000
         - name: NEXTAUTH_SECRET
           valueFrom:
             secretKeyRef:
