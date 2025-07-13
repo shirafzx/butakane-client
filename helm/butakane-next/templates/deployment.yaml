@@ -22,7 +22,7 @@ spec:
         - name: NEXT_PUBLIC_API
           value: http://butakane-api.butakane-dev.svc:8081
         - name: NEXTAUTH_TRUST_HOST
-          value: true
+          value: "true"
         - name: NEXTAUTH_URL
           value: https://butakane.lysquinox.dev
         - name: NEXTAUTH_URL_INTERNAL
