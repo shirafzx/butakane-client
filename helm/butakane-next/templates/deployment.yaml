@@ -20,7 +20,7 @@ spec:
         - containerPort: 3000
         env:
         - name: NEXT_PUBLIC_API
-          value: http://butakane-api.butakane-dev.svc:8081
+          value: http://butakane-api.butakane-dev.svc:8081/api
         - name: NEXTAUTH_TRUST_HOST
           value: "true"
         - name: NEXTAUTH_URL
